@@ -14,6 +14,4 @@ Machine learning models require `specialized environment` to load them into memo
 
 ### Data and Prerequisities:
 
-```
 1. CIFAR-10 Dataset. [Source link](https://www.cs.toronto.edu/~kriz/cifar.html).
-```
