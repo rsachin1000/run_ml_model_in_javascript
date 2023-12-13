@@ -15,3 +15,4 @@ Machine learning models require `specialized environment` to load them into memo
 ### Data and Prerequisities:
 
 1. CIFAR-10 Dataset. [Source link](https://www.cs.toronto.edu/~kriz/cifar.html).
+2. An Image Classification Model. We have all the model related files in this repo. However, if you want to go into the details of creating the model, training it, and making inference, visit [here](https://medium.com/bitgrit-data-science-publication/building-an-image-classification-model-with-pytorch-from-scratch-f10452073212).

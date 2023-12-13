@@ -1,0 +1,16 @@
+{
+  "name": "onnxjs-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "load_onnx_model_in_js.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "onnxjs": "^0.1.8",
+    "pngjs": "^7.0.0"
+  }
+}

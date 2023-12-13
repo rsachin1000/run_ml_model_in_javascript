@@ -160,4 +160,5 @@ cython_debug/
 #.idea/
 
 # Other project files
-train_test_data/
+data/
+node_modules/
