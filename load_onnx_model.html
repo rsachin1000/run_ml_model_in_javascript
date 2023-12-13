@@ -4,10 +4,47 @@
 <head>
     <title>ONNX.js Demo</title>
     <script src="https://cdn.jsdelivr.net/npm/onnxjs@0.1.7/dist/onnx.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #imageUpload {
+            padding: 10px 15px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        #imageUpload:hover {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        #classNameDisplay {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            width: 300px;
+            text-align: center;
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
     <input type="file" id="imageUpload" accept="image/*" />
+    <div id="classNameDisplay">Class Name will appear here</div>
     <script>
         async function loadModel() {
             const session = new onnx.InferenceSession();
@@ -65,6 +102,10 @@
 
                 const className = await objectClassName(outputData);
                 console.log("Class of Identified Object: ", className);
+
+                const displayElement = document.getElementById('classNameDisplay');
+                displayElement.textContent = "Identified Object: " + className;
+                displayElement.style.display = 'block';
             };
         });
     </script>
